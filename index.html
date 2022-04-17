@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hello world</h1>
+    <div id="data"></div>
+    <div id="angka"></div>
+</body>
+
+<script>
+    for (var i = 0; i < 5; i++) {
+        console.log("Nilai ini adalah " + i);
+    }
+
+    var j = 0;
+    while (j < 5) {
+        console.log("Ini adalah " + j);
+        j++;
+    }
+
+    var k = 0;
+    do {
+        console.log("do while bernilai " + k);
+        k++;
+    } while (k < 5);
+
+    var lampu = "biru";
+
+    if (lampu == "merah") {
+        console.log("Lampu nyala merah");
+        document.getElementById("data").innerHTML = "Lampu nyala merah";
+    } else if (lampu == "kuning") {
+        console.log("Lampu nyala kuning");
+    } else if (lampu == "hijau") {
+        console.log("Lampu nyala hijau");
+    } else {
+        console.log("Tidak ada warna tersebut");
+        document.getElementById("data").innerHTML = "Tidak ada warna tersebut";
+    }
+
+    switch (lampu) {
+        case "merah":
+            console.log("Lampu nyala merah");
+            break;
+
+        case "kuning":
+            console.log("Lampu nyala kuning");
+            break;
+
+        case "hijau":
+            console.log("Lampu nyala hijau");
+            break;
+
+        default:
+            console.log("Tidak ada warna tersebut");
+            document.getElementById("data").innerHTML = "Tidak ada warna tersebut";
+            break;
+    }
+
+    function kaliAngka(angka1, angka2) {
+        console.log("Proses Perhitungan " + angka1 + " dan " +angka2);
+        return angka1 * angka2;
+    }
+    console.log(kaliAngka(5,10));
+    console.log(kaliAngka(5, 5));
+
+    document.getElementById("angka").innerHTML=kaliAngka(5,10);
+</script>
+
+</html>
